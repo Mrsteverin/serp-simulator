@@ -129,6 +129,9 @@ function parseMeta(html: string) {
 
 async function fetchWithProxies(url: string): Promise<string> {
   const attempts = [
+    // Our own Vercel serverless function — most reliable
+    async () => { const r = await fetch(`/api/fetch-meta?url=${encodeURIComponent(url)}`, { signal: AbortSignal.timeout(10000) }); if (!r.ok) throw new Error(); return r.text(); },
+    // Public CORS proxies as fallback
     async () => { const r = await fetch(`https://corsproxy.io/?url=${encodeURIComponent(url)}`, { signal: AbortSignal.timeout(8000) }); if (!r.ok) throw new Error(); return r.text(); },
     async () => { const r = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`, { signal: AbortSignal.timeout(8000) }); if (!r.ok) throw new Error(); return r.text(); },
     async () => { const r = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`, { signal: AbortSignal.timeout(8000) }); const j = await r.json(); if (!j.contents) throw new Error(); return j.contents as string; },
