@@ -1,11 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import App from '../components/App.tsx';
 ---
 
 <Layout
-  title="Citylaser Stockholm – Medicinsk Estetik"
-  description="Citylaser är Stockholms ledande klinik för medicinsk estetik. Laser, botox, fillers och hudvård."
+  title="Digital Effekt – SEO-byrå i Stockholm"
+  description="Vi hjälper svenska företag att synas i Google och få fler kunder online."
 >
-  <App client:only="react" />
+  <main class="min-h-screen flex items-center justify-center">
+    <div class="text-center">
+      <h1 class="text-3xl font-bold text-gray-900 mb-4">Digital Effekt</h1>
+      <a href="/serp-simulator" class="text-indigo-600 hover:underline text-lg">→ SERP Simulator</a>
+    </div>
+  </main>
 </Layout>
