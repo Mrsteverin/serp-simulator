@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SerpSimulator from '../components/SerpSimulator.tsx';
+---
+
+<Layout
+  title="SERP Simulator — Preview Your SEO Metadata"
+  description="Preview and optimize your title and meta description before publishing. See exactly how your page will look in Google Search results."
+>
+  <style>
+    /* Override the site's warm background for this standalone tool */
+    body {
+      background-color: #f8f9fb !important;
+    }
+  </style>
+
+  <SerpSimulator client:only="react" />
+</Layout>

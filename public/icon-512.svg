@@ -1,0 +1,7 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="116" fill="#2C2926"/>
+  <circle cx="256" cy="232" r="100" fill="#C9A49E" opacity="0.9"/>
+  <circle cx="256" cy="232" r="60" fill="#FAF8F5"/>
+  <text x="256" y="254" font-family="Georgia, serif" font-size="48" font-weight="400" text-anchor="middle" fill="#2C2926">CL</text>
+  <text x="256" y="400" font-family="Georgia, serif" font-size="42" text-anchor="middle" fill="#FAF8F5" opacity="0.9" letter-spacing="6">CITYLASER</text>
+</svg>

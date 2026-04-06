@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import App from '../components/App.tsx';
+---
+
+<Layout
+  title="Citylaser Stockholm – Medicinsk Estetik"
+  description="Citylaser är Stockholms ledande klinik för medicinsk estetik. Laser, botox, fillers och hudvård."
+>
+  <App client:only="react" />
+</Layout>
